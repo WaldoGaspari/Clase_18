@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <h1>Clase Nº18: Mejoras de plantillas - App</h1>
+    <h2>Alumno: {{nombre}} {{apellido}}</h2>
+    <h2>Notas de examenes:</h2>
+    <p>
+        {% for nota in notas %}
+            {% if nota < 4 %}
+                <p style="color: red"> Nota: {{nota}} DESAPROBADO</p>
+            {% else %}
+                <p style="color: green"> Nota: {{nota}} APROBADO</p>
+            {% endif %}
+        {% endfor %}
+    </p>
+</body>
+</html>
